@@ -15,7 +15,7 @@ Edytowalem plik readme </br>
   <li>Pozycja 3 listy numerowanej</li>
 </ol> </br> </br>
 
-   | Imie | Naziwsko
+JDD| Imie | Naziwsko
 ---|------|---------
 1. |Nie|Moge
 2. |Jest|RODO
