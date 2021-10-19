@@ -19,3 +19,6 @@ Edytowalem plik readme </br>
 ---|------|-------
 1|Nie|Moge
 2|Jest|RODO
+
+Teraz dodam linie kodu
+`print("Hello word")`
