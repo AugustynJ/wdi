@@ -17,5 +17,5 @@ Edytowalem plik readme </br>
 
 /| Imie | Naziwsko
 ---|------|-------
-1. |Nie|Moge
-2. |Jest|RODO
+1|Nie|Moge
+2|Jest|RODO
