@@ -20,5 +20,9 @@ Edytowalem plik readme </br>
 1|Nie|Moge
 2|Jest|RODO
 
+To napisałem w VS Code
+
+<img src="/labolatorium_2/cat.jpg">
+
 Teraz dodam linie kodu
 `print("Hello word")`
