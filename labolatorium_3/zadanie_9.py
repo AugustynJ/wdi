@@ -28,6 +28,7 @@ while (praca > 0) :
         print("Twoje saldo wynosi: %d" %saldo)
     elif op == "E":
         praca = 0
+    else: print("Niewalsciwa operacja!\nPowtórz próbę.")
     if op != "E":
         print("Co chcesz zrobic w kolejnym kroku?")
 
