@@ -6,4 +6,5 @@ while a < 1000000:
     tmp = a
     a += b
     b = tmp
+    #print (a)
     i += 1
