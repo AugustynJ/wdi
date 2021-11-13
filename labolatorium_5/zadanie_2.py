@@ -10,7 +10,6 @@ n = int(input("Podaj liczbe: "))
 i = 0
 flag = 0
 while(F[i] < n): i += 1
-print(i)
 while(i < zakres and flag == 0):
     for j in range (0, i):
         if(F[i] - F[j] == n):
