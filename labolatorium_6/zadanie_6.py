@@ -1,5 +1,5 @@
 import math
-zakres = 10**5
+zakres = 10**3
 
 #Tablica liczb pierwszych
 P = []
@@ -35,6 +35,9 @@ for i in range (7, zakres):
 praca = 1
 while(praca > 0):
     q = int(input("Podaj liczbe:"))
+    if(not(type(q) == int) or q<0):
+        print("Coś popsułeś!")
+        break
     a = 0
     for i in range (1, q+1): a += T[i]
     print("Odpowiedź to %d" %a)
