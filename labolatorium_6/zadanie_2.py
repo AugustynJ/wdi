@@ -1,0 +1,10 @@
+a1 = float(input("Podaj część rzeczywistą pierwszej liczby: "))
+b1 = float(input("Podaj część urojoną pierwszej liczby: "))
+a2 = float(input("Podaj część rzeczywistą drugiej liczby: "))
+b2 = float(input("Podaj część urojoną drugiej liczby: "))
+
+print("Suma = %.2f+%.2fi" %(a1+a2, b1+b2))
+print("Różnica = %.2f+%.2fi" %(a1-a2, b1-b2))
+print("Iloczyn = %.2f+%.2fi" %(a1*a2-b1*b2, b2*a1+a2*b1))
+if(a2 != 0 and b2 != 0): print("Iloraz = %.2f+%.2fi" %((a1*a2+b1*b2)/(a2**2+b2**2), (b2*a1+a2*b1)/(a2**2+b2**2)))
+else: print("Iloraz nie istnieje! Cos zjebałeś!")
