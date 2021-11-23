@@ -13,12 +13,21 @@ T = []
 # for i in range (0, n):
 #     T.append(i)
 
-# Połowa jest ciągiem, połowa jest stała
-T.append(-420)
-for i in range (1, int(n/2)): 
-    T.append(i)
-for i in range(int(n/2), n):
-    T.append(8086)
+# Tablica ,,na przemian"
+# for i in range (0, n):
+#     if(i%2): T.append(80)
+#     else: T.append(86)
+
+# Tablica stała
+# for i in range (0, n):
+#     T.append(420)
+
+# Połowa ciąg, połowa stała
+# T.append(-420)
+# for i in range (1, int(n/2)): 
+#     T.append(i)
+# for i in range(int(n/2), n):
+#     T.append(8086)
 
 
 for i in range(0, n):
@@ -45,7 +54,6 @@ for i in range (2, n):
 if(l > max_l):
             max_l = l
             max_pos = i - l + 1
-print(max_pos)
 print("Najdluzszy podciag ma dlugosc: %d" %max_l)
 print("Jego elementy: "),
 for i in range (max_pos, max_pos+max_l):
