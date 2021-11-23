@@ -9,10 +9,9 @@ T = []
 # for _ in range (0, n):
 #     T.append(random.randint(a, b))
 
-
-
-
-
+# T[i] == i
+# for i in range (0, n):
+#     T.append(i)
 
 # Połowa jest ciągiem, połowa jest stała
 T.append(-420)
@@ -21,9 +20,16 @@ for i in range (1, int(n/2)):
 for i in range(int(n/2), n):
     T.append(8086)
 
+
 for i in range(0, n):
-    print(T[i]),
-print("\n\n\n")
+    print(i, T[i]),
+print("\n\n")
+
+# Właściwy program
+if n == 1: 
+    print("Ciąg jest jednoelementowy, nie posiada różnicy a jego suma to %d" %T[0])
+    exit()
+
 max_l = 2
 max_pos = 0
 l = 2
@@ -33,12 +39,13 @@ for i in range (2, n):
     else:
         if(l > max_l):
             max_l = l
-            max_pos = i - l
+            max_pos = i - l + 1
         l = 2
-    print(T[i]-T[i-1], T[i-1]-T[i-2], l)
+    print(T[i], T[i]-T[i-1], T[i-1]-T[i-2], l)
 if(l > max_l):
             max_l = l
-            max_pos = i - l
+            max_pos = i - l + 1
+print(max_pos)
 print("Najdluzszy podciag ma dlugosc: %d" %max_l)
 print("Jego elementy: "),
 for i in range (max_pos, max_pos+max_l):
