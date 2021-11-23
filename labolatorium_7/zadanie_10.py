@@ -6,8 +6,8 @@ b = int(input("Podaj górny zakres: "))
 T = []
 
 # Normalna treść z zadania:
-# for _ in range (0, n):
-#     T.append(random.randint(a, b))
+for _ in range (0, n):
+    T.append(random.randint(a, b))
 
 # T[i] == i
 # for i in range (0, n):
@@ -30,9 +30,9 @@ T = []
 #     T.append(8086)
 
 
-for i in range(0, n):
-    print(i, T[i]),
-print("\n\n")
+# for i in range(0, n):
+#     print(i, T[i]),
+# print("\n\n")
 
 # Właściwy program
 if n == 1: 
@@ -48,9 +48,9 @@ for i in range (2, n):
     else:
         if(l > max_l):
             max_l = l
-            max_pos = i - l + 1
+            max_pos = i - l
         l = 2
-    print(T[i], T[i]-T[i-1], T[i-1]-T[i-2], l)
+    if(l > 2): print(T[i], T[i]-T[i-1], T[i-1]-T[i-2], l)
 if(l > max_l):
             max_l = l
             max_pos = i - l + 1
