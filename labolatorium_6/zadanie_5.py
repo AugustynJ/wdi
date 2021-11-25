@@ -17,5 +17,5 @@ brev = b[::-1]
 pal_bin = b == brev
 
 
-print(n, n_str, rev, pal)
+print(n_str, rev, pal)
 print(b, brev, pal_bin)
