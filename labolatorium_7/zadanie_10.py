@@ -30,9 +30,9 @@ for _ in range (0, n):
 #     T.append(8086)
 
 
-# for i in range(0, n):
-#     print(i, T[i]),
-# print("\n\n")
+for i in range(0, n):
+    print(i, T[i]),
+print("\n\n")
 
 # Właściwy program
 if n == 1: 
