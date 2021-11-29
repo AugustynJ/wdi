@@ -1,7 +1,7 @@
 import math
-zakres = 10**3
+zakres = 10**4
 
-#Tablica liczb pierwszych
+# Lista liczb pierwszych
 P = []
 P.append(0)
 P.append(0)
@@ -16,7 +16,7 @@ for i in range (3, zakres):
     if (flag == 1): P.append(1)
 
 
-#Tablica wartości z zadania
+# Lista wartości z zadania
 T = [1]*zakres
 T[0] = 0
 for i in range (7, zakres):
@@ -24,7 +24,6 @@ for i in range (7, zakres):
         T[i] = 0
         continue
     for j in range (6, i):
-        #print(j)
         if(P[j] == 0): continue
         if(i%j == 0):
             T[i] = 0
@@ -39,15 +38,15 @@ while(praca > 0):
         print("Coś popsułeś!")
         break
     a = 0
-    for i in range (1, q+1): a += T[i]
+    for i in range (1, q): a += T[i]
     print("Odpowiedź to %d" %a)
     inp = ""
     while(inp != "Y" and inp != "N"):
-        inp = input("Czy chcesz dalej kontynuować zapytania? [Y/N]")
+        inp = input("Czy chcesz dalej kontynuować zapytania? [Y/N] ")
         if(inp == "N"):
             praca = 0
             print("OK to do zobaczenia!")
             break
         elif(inp == "Y"): praca = 1
-        else: print("Wprowadzono nieprawidłową wartość. Podaj ponownie: [Y/N]")
+        else: print("Wprowadzono nieprawidłową wartość.")
         #print(inp)
