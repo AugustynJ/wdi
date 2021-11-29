@@ -46,7 +46,7 @@ while(praca > 0):
         if(inp == "N"):
             praca = 0
             print("OK to do zobaczenia!")
-            break
+            exit()
         elif(inp == "Y"): praca = 1
         else: print("Wprowadzono nieprawidłową wartość.")
         #print(inp)
