@@ -23,8 +23,8 @@ def alfabetyczne(s1, s2):
         odp = 0
     return odp   
 
-T = ["abba", "banicja", "ban", "menel"]
-a = "abcdefghijklmnopqrstuvwxyz"
+T = ["hello", "emma", "emmaaaa", "mop"]
+a = "hlabcdefgijkmnopqrstuvwxyz"
 A = list(a)
 for i in range (1, len(T)):
     if(alfabetyczne(T[i-1], T[i]) == 0):
