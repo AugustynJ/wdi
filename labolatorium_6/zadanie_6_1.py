@@ -30,4 +30,3 @@ for i in range (7, zakres):
             break
 for i in range (0, zakres): 
     print("T[%d] = %d" %(i, T[i]))
-tab.close()
