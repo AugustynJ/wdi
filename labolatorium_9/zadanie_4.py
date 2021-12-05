@@ -21,13 +21,26 @@ def det(M, n):
     return s
 
 
-n = int(input("Podaj liczbę niewiadomych: "))
-M = [[0] * (n+1) for i in range(n)]
-for i in range(n):
-    for j in range (n):
-        M[i][j] = int(input("Podaj współczynnik stojący przy zmiennej a_%d w %d równaniu: " %(j+1, i+1)))
-    M[i][n] = int(input("Podaj wynik równania: "))
-# M = [[3, 7, 1, 11], [4, 8, 2, 12], [6, 9, 5, 13], [14, 15, 16, 10]]
+# n = int(input("Podaj liczbę niewiadomych: "))
+# M = [[0] * (n+1) for i in range(n)]
+# for i in range(n):
+#     for j in range (n):
+#         M[i][j] = int(input("Podaj współczynnik stojący przy zmiennej a_%d w %d równaniu: " %(j+1, i+1)))
+#     M[i][n] = int(input("Podaj wynik równania: "))
+
+# Przyklad 1 dla (a_1, a_2, a_3, a_4, a_5, a_6) = (1, 2, 3, 4, 5, 6) 
+# n = 6
+# M = [[1, 1, 1, 1, 1, 1, 21], [2, 1, 3, 7, 6, 9, 125], [-2, -1, -1, -1, -1, -10, -76], [8, 0, 8, 6, 1, 1, 67], [6, 5, 4, 3, 2, 1, 56], [-1, 1, -1, 1, -1, 1, 3]] 
+
+# Przyklad 2 dla (a_1, a_2, a_3) = (1, 1, 1)
+# n = 3
+# M = [[1, 2, 3, 6], [4, -5, 1, 0], [2, 1, 3, 6]] #
+
+# Przykład 3 dla (a_1, a_2) = (1/6, -3/7)
+# n = 2
+# M = [[6, 7, -2], [3, 0, 0.5]]
+
+
 W = [[0] * n for i in range(n)]
 for i in range (n):
     for j in range (n):
@@ -68,3 +81,21 @@ else:
             print("Brak rozwiązań!")
             exit(0)
     print("Układ jest nieoznaczony - rozwiązań jest nieskonczenie wiele")
+
+##################################################################################
+# Wyjście 1:
+# Zmienna a_1 ma wartość: 1.00
+# Zmienna a_2 ma wartość: 2.00
+# Zmienna a_3 ma wartość: 3.00
+#
+# Wyjscie 2:
+# Zmienna a_1 ma wartość: 1.00
+# Zmienna a_2 ma wartość: 2.00
+# Zmienna a_3 ma wartość: 3.00
+# Zmienna a_4 ma wartość: 4.00
+# Zmienna a_5 ma wartość: 5.00
+# Zmienna a_6 ma wartość: 6.00
+#
+# Wyjście 3:
+# Zmienna a_1 ma wartość: 0.17 
+# Zmienna a_2 ma wartość: -0.43
