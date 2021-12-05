@@ -23,7 +23,7 @@ def alfabetyczne(s1, s2):
         odp = 0
     return odp   
 
-T = ["hello", "emma", "emmaaaa", "mop"]
+T = ["hello", "emma", "emmaaaa", "klops", "nein"]
 a = "hlabcdefgijkmnopqrstuvwxyz"
 A = list(a)
 for i in range (1, len(T)):
