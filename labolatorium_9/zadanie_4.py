@@ -61,7 +61,6 @@ if(det(W, n) != 0):
                     Z[i][kZ] = M[i][n]
             kM += 1
             kZ += 1
-        print(Z)
 
         print("Zmienna a_%d ma wartość: %.2f" %(z+1, det(Z, n)/det(W, n)))
 else:

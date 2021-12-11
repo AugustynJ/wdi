@@ -1,0 +1,5 @@
+sin 90
+cos 45
+sin 60
+cos pi/3
+sin pi/6

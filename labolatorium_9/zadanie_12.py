@@ -12,7 +12,7 @@ for i in range (3, 1000):
             break
     if (flag == 1): P.append(1)
 
-print(P[2])
+
 n = int(input("Podaj rozmiar macierzy: "))
 M = [[0]*n for i in range (n)]
 for i in range (n):
@@ -25,7 +25,6 @@ for i in range(n):
         m = M[i][j]
         for k in range(i, n):
             for l in range (j, n):
-                print(m + M[k][l])
                 if(P[m + M[k][l]] == 1):
                     flag = 1
                     break
