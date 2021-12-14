@@ -40,6 +40,14 @@ M = [[1, 2, 3, 6], [4, -5, 1, 0], [2, 1, 3, 6]]
 # n = 2
 # M = [[6, 7, -2], [3, 0, 0.5]]
 
+# Przyklad 4 układ sprzeczny
+# n = 2
+# M = [[3, 4, 5], [3, 4, 9]]
+
+# Przykład 5 układ nieoznaczony
+# n = 2
+# M = [[1, 2, 7], [2, 4, 14]]
+
 
 W = [[0] * n for i in range(n)]
 for i in range (n):
@@ -61,7 +69,7 @@ if(det(W, n) != 0):
                     Z[i][kZ] = M[i][n]
             kM += 1
             kZ += 1
-        print(Z)
+        #print(Z)
 
         print("Zmienna a_%d ma wartość: %.2f" %(z+1, det(Z, n)/det(W, n)))
 else:
@@ -100,3 +108,9 @@ else:
 # Wyjście 3:
 # Zmienna a_1 ma wartość: 0.17 
 # Zmienna a_2 ma wartość: -0.43
+#
+# Wyjście 4:
+# Brak rozwiązań!
+#
+# Wyjście 5:
+# Układ jest nieoznaczony - rozwiązań jest nieskonczenie wiele
