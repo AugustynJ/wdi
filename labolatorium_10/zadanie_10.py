@@ -1,7 +1,7 @@
 dane = open('/home/kuba/Documents/GitHub/wdi/labolatorium_10/dane.txt', 'r')
 zapis = open('/home/kuba/Documents/GitHub/wdi/labolatorium_10/wyniki.txt', 'w')
 
-for _ in range(0, 5):
+for _ in range(0, 6):
     a = dane.readline()
     f = ""
     i = 0
@@ -12,7 +12,7 @@ for _ in range(0, 5):
     x = ""
     rad = 0
     i += 1
-    while(i < len(a)-1):
+    while(a[i] != " " and a[i] != "\n"):
         x += a[i]
         i += 1
     
