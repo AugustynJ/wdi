@@ -1,69 +1,78 @@
+import math
 dane = open('/home/kuba/Documents/GitHub/wdi/labolatorium_10/dane.txt', 'r')
-zapis = open('/home/kuba/Documents/GitHub/wdi/labolatorium_10/wyniki.txt', 'w')
 
-for _ in range(0, 6):
-    a = dane.readline()
-    f = ""
+a = float("90.87\n")
+znaki = ['+', '-', '*', '/', '']
+cyfry = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+trygo = dane.readlines()
+praca = 1
+while(praca):
+    dz = input("Podaj wyrażenie: ")
     i = 0
-    while(a[i] != " "): 
-        f += a[i]
-        i += 1
-
+    f = ""
     x = ""
-    rad = 0
-    i += 1
-    while(a[i] != " " and a[i] != "\n"):
-        x += a[i]
+    while(i < len(dz)):
+        f = f + dz[i]
         i += 1
+        if(dz[i] in cyfry): break
+    while(i < len(dz)):
+        x = x + dz[i]
+        i += 1
+        if(dz[i] in znaki): break
+        if(i == len(dz)-1):
+            x += dz[i]
+            break
+    f += '\n'
+    x += '\n'
+    j = 0
+    while(trygo[j] != f): j += 1
+    while(trygo[j] != x): j += 1
+    x = trygo[j+1]
+    print (x)
+        
+        
+        
+
     
-    print(x)
-    if(x == "pi/6"): 
-        x = 30
-        rad = 1
-    elif(x == "pi/4"): 
-        rad = 1
-        x = 45
-    elif(x == "pi/3"): 
-        rad = 1
-        x = 60
-    elif(x == "pi/2"): 
-        rad = 1
-        x = 90
-    elif(x == "pi"): 
-        rad = 1
-        x = 180
-    elif(x == "2*pi"): 
-        rad = 1
-        x = 360
-    x = int(x)
-    T = [[0]*4 for i in range 7]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # if(x == "pi/6"): rad = 1
+    # elif(x == "pi/4"): x = 45
+    # elif(x == "pi/3"): x = 60
+    # elif(x == "pi/2"): x = 90
+    # elif(x == "pi"):  x = 180
+    # elif(x == "2*pi"): x = 360
 
     # if(f == "sin"):
     #     if(not rad):
@@ -72,7 +81,7 @@ for _ in range(0, 6):
     #         elif(x == 45): print("sin 45 = sqrt(2)/2 = 0.707", file = zapis)
     #         elif(x == 60): print("sin 60 = sqrt(3)/2 = 0.866", file = zapis)
     #         elif(x == 90): print("sin 90 = 1", file = zapis)
-    #         elif(x == 180): print("sin 180 = 2", file = zapis)
+    #         elif(x == 180): print("sin 180 = 0", file = zapis)
     #         elif(x == 360): print("sin 360 = 0", file = zapis)
     #     else:
     #         if(x == 0): print("sin 0 = 0", file = zapis)
@@ -80,7 +89,7 @@ for _ in range(0, 6):
     #         elif(x == 45): print("sin pi/4 = sqrt(2)/2 = 0.707", file = zapis)
     #         elif(x == 60): print("sin pi/3 = sqrt(3)/2 = 0.866", file = zapis)
     #         elif(x == 90): print("sin pi/2 = 1", file = zapis)
-    #         elif(x == 180): print("sin pi = 2", file = zapis)
+    #         elif(x == 180): print("sin pi = 0", file = zapis)
     #         elif(x == 360): print("sin 2*pi = 0", file = zapis)
     # elif(f == "cos"):
     #     if(not rad):
