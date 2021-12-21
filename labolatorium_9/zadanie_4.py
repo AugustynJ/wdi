@@ -1,3 +1,10 @@
+def printuj(T, n):
+    for i in range(n):
+        for j in range(n):
+            print(T[i][j], end = ', ')
+        print("")
+    return None
+
 def minor(M, n, k):
     T = [[0]*(n-1) for i in range (n-1)]
     kM = 0
@@ -33,8 +40,8 @@ def det(M, n):
 # M = [[1, 1, 1, 1, 1, 1, 21], [2, 1, 3, 7, 6, 9, 125], [-2, -1, -1, -1, -1, -10, -76], [8, 0, 8, 6, 1, 1, 67], [6, 5, 4, 3, 2, 1, 56], [-1, 1, -1, 1, -1, 1, 3]] 
 
 # Przyklad 2 dla (a_1, a_2, a_3) = (1, 1, 1)
-n = 3
-M = [[1, 2, 3, 6], [4, -5, 1, 0], [2, 1, 3, 6]] 
+# n = 3
+# M = [[1, 2, 3, 6], [4, -5, 1, 0], [2, 1, 3, 6]] 
 
 # Przykład 3 dla (a_1, a_2) = (1/6, -3/7)
 # n = 2
@@ -45,8 +52,8 @@ M = [[1, 2, 3, 6], [4, -5, 1, 0], [2, 1, 3, 6]]
 # M = [[3, 4, 5], [3, 4, 9]]
 
 # Przykład 5 układ nieoznaczony
-# n = 2
-# M = [[1, 2, 7], [2, 4, 14]]
+n = 2
+M = [[1, 2, 7], [2, 4, 14]]
 
 
 W = [[0] * n for i in range(n)]
@@ -69,7 +76,7 @@ if(det(W, n) != 0):
                     Z[i][kZ] = M[i][n]
             kM += 1
             kZ += 1
-        #print(Z)
+        printuj(Z, n)
 
         print("Zmienna a_%d ma wartość: %.2f" %(z+1, det(Z, n)/det(W, n)))
 else:
