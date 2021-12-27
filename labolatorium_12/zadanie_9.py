@@ -1,7 +1,7 @@
 class pkt:
-    def x(self, value):
+    def x(self, value):                                  #współrzędna x-owa
         self.data = value
-    def y(self, value):
+    def y(self, value):                                  #współrzędna y-owa
         self.data = value
 
 def pole(a, b, c):
@@ -12,7 +12,7 @@ def zadanie(dane):
     for A in dane:
         for B in dane:
             for C in dane:
-                if(A == B or B == C or C == A): continue
+                if(A == B or B == C or C == A): continue #porównujemy tylko różne punkty
                 i += 1
                 if(A.x == B.x and A.y == C.y):
                     wewn = 0
@@ -37,6 +37,6 @@ for i in range (n):
     A.x = float(input("A_%d.x = " %(i+1)))
     A.y = float(input("A_%d.y = " %(i+1)))
     dane.append(A)
-print(zadanie(dane))
 
+print(zadanie(dane))
 
