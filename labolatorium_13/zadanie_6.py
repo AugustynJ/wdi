@@ -1,9 +1,22 @@
-def printowanie(T, n):
+import time
+def print_prostok(T, n):
     for i in range(n):
         for j in range(i+1):
-            print('{0:3}'.format(T[i][j]), end=" ")
+            print('{0:4}'.format(T[i][j]), end=" ")
+            time.sleep(0.1)
         print("")
-    print("...\n")
+    print("\n\n")
+    return None
+
+def nowy_lepszy_print(T, n):
+    for i in range(n):
+        for j in range (i, n): print("      ", end="")
+        for j in range(i+1):
+            time.sleep(0.1)
+            print('{0:4}'.format(T[i][j]), end=" ")
+        print("")
+    print("\n\n")
+    return None
 
 def pascal (n):
     T = [[0] * (n) for i in range(n)]
@@ -16,6 +29,7 @@ def pascal (n):
     return T
 
 # n = int(input("Podaj ilość wierszy: "))
-n = 5
+n = 15
 T = pascal(n)
-printowanie(T, n)
+print_prostok(T, n)
+nowy_lepszy_print(T, n)
