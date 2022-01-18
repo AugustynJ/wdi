@@ -36,7 +36,7 @@ dane = []
 #     A.y = float(input("A_%d.y = " %(i+1)))
 #     dane.append(A)
 
-#Przykład 1
+# Przykład 1
 A = pkt()
 A.x = 1
 A.y = 10
@@ -78,8 +78,8 @@ J.x = 10
 J.y = 5
 dane.append(J)
 K = pkt()
-K.x = 4
-K.y = 6
+K.x = 9
+K.y = 5
 dane.append(K)
 
 #Przykład 2
@@ -103,10 +103,15 @@ dane.append(K)
 for i in dane: print(i.x, i.y)
 print(zadanie(dane))
 
-#Wyjście przykładu 1:
+# Wyjście przykładu 1:
 # Spostrzeżenie: punkty (poza K) są ułożone na dwóch nierównoległych prostych
 # Bez punktu K -> False
 #        ponieważ każdy punkt ma różną współrzędną x-ową jak i y-ową
 # Z punktem K -> To zależy...
 #        (8, 2), (9, 2) -> False
 #        (3, 3), (4, 6) -> True
+#
+# Wyjście przykładu 2:
+# False
+#        A, B, C tworzą trójkąt prostokątny zgodny z warunkami zadania, lecz 
+#        D leży wenątrz niego

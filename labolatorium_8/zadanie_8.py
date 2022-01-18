@@ -16,25 +16,29 @@ def koniec(s, n):
     
 
 #########################################
-wej = input("Podaj ciąg znaków: ")
-s = ""
-for i in range(0, len(wej)):
-    if(wej[i] == '(' or wej[i] == ')'):
-        s += wej[i]
+# wej = input("Podaj ciąg znaków: ")
+def zadanie(wej):
+    s = ""
+    odp = ""
+    for i in range(0, len(wej)):
+        if(wej[i] == '(' or wej[i] == ')'):
+            s += wej[i]
+    i=0
+    while(i < len(s)):
+        if(s[i] != '('):
+            i += 1
+            continue
+        ind = koniec(s, i)
+        if(ind != -1):
+            # print("\"", end="")
+            for j in range(i, ind):
+                odp += (s[j])
+            # print("\", ", end="")
+            odp += " "
+            i = ind
+        else: i += 1
+    if(odp == ""): return None
+    return odp
 
-i=0
-while(i < len(s)):
-    if(s[i] != '('):
-        i += 1
-        continue
-    ind = koniec(s, i)
-    if(ind != -1):
-        print("\"", end="")
-        for j in range(i, ind):
-            print(s[j], end="")
-        print("\", ", end="")
-        i = ind
-    else: i += 1
-            
-print("")
+# print("")
 
