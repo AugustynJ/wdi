@@ -1,4 +1,4 @@
-import unittest
+import pytest
 from zadanie_6 import pascal_test
 
 def test_pascal():
